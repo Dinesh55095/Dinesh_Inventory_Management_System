@@ -5,7 +5,7 @@ import './ItemDetails.css';
 function SupplierDetails(props) {
 
     const [countries, setCountries] = useState([]);
-    const [selectedSateList, setSelectedSateList] = useState([]);
+    // const [selectedSateList, setSelectedSateList] = useState([]);
     const [countriesId, setCountriesId] = useState();
     console.log('Response:selectedSateList ', selectedSateList);
     useEffect(() => {
@@ -23,9 +23,6 @@ function SupplierDetails(props) {
     useEffect(() => {
         fetch('https://apis-technical-test.conqt.com/Api/countrystatecity/Get-All-SateList-By-Country?countryId=${countriesId}`)').then((responce) => {
             responce.json().then((result) => {
-    console.log('Response:selectedSateList result', result);
-
-                setSelectedSateList(result)
             })
         })
     }, [])
