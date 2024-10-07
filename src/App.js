@@ -6,6 +6,7 @@ import SupplierDetails from './Components/SupplierDetails';
 import SubmittedData from './Components/SubmittedData';
 import GetDataTable from './Components/getDataTable';
 
+
 function App() {
   const [item, setItem] = useState(true);
   const [supplier, setSupplier] = useState(false);
@@ -16,6 +17,7 @@ function App() {
   const [supplierName, setSupplierName] = useState("");
   const [email, setEmail] = useState("");
   const [cityName, setCityName] = useState("");
+
 
   return (
     <div className="App">
@@ -46,7 +48,6 @@ function App() {
           setCityName={setCityName}
         />
       }
-
       <SubmittedData />
       <GetDataTable
         itemName={itemName}
